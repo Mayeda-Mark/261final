@@ -64,11 +64,16 @@
           </div>
           <div>
           	<form id="info">
-          		Principle:<input style="border: outset;" type="text" id="principle">
-              Interest:<input type="text" style="border: outset;" id="interest" size="4">
-              Down Payment Amount:<input id="DPAmnt" type="text" onchange="DPPrecentChange();">
-              Down Payment Percent:<input id="DPPcnt" type="text" onchange="DPAmntChange();">
+          		Principle:<input style="border: outset;" type="text" id="principle" onchange="makeTable();">
+              Interest:<input type="text" style="border: outset;" id="interest" size="4" onchange="makeTable();">
+              Down Payment Amount:<input id="DPAmnt" type="text" onchange="DPPrecentChange(); makeTable();">
+              Down Payment Percent:<input id="DPPcnt" type="text" onchange="DPAmntChange(); makeTable();">
           		State:<div id="stateSelect"></div>
+              Length:<select id="length" onchange="makeTable();">
+                <option value="">- Select -</option>
+                <option value="15">15 Year</option>
+                <option value="30">30 Year</option>
+              </select>
           	</form>
           </div>
 
@@ -98,7 +103,7 @@
           </div>
           <div class="page-content">
             <div class="block">
-              <p>Table goes here.</p>
+              <div id="table"></div>
             </div>
           </div>
         </div>
