@@ -19,3 +19,20 @@ function stateInsurance() {
   var rate = document.getElementById('stateInfo').value;
   document.getElementById('interest').value = rate;
 }
+
+function DPPrecentChange() {
+  if (document.getElementById('principle')) {
+    var amnt = document.getElementById('DPAmnt').value;
+    var principle = document.getElementById('principle').value;
+    document.getElementById('DPPcnt').value = (amnt / principle) * 100;
+  }
+}
+
+function DPAmntChange() {
+  if (document.getElementById('principle')) {
+  var principle = document.getElementById('principle').value;
+    var placeholder = document.getElementById('DPPcnt').value;
+    var pcnt = document.getElementById('DPPcnt').value * .001;
+    document.getElementById('DPAmnt').value = principle * pcnt;
+  }
+}

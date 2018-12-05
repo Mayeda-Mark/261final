@@ -30,9 +30,6 @@
           </div>
 
           <!-- Pannel -->
-
-
-
           <div class="page-content">
             <div class="block">
             	<ul>
@@ -61,23 +58,16 @@
             <div class="title sliding">My App</div>
           </div>
         </div>
-        <!-- Toolbar--><!--
-        <div class="toolbar">
-          <div class="toolbar-inner">
-            <a href="#" class="link">Left Link</a>
-          </div>
-        </div>-->
-        <!-- Scrollable page content-->
         <div class="page-content">
           <div class="block block-strong">
             <p>Instructions go here</p>
           </div>
-
-          <div class="block-title">Form</div>
           <div>
           	<form id="info">
-          		Principle:<input style="border: outset;" type="text" name="principle">
+          		Principle:<input style="border: outset;" type="text" id="principle">
               Interest:<input type="text" style="border: outset;" id="interest" size="4">
+              Down Payment Amount:<input id="DPAmnt" type="text" onchange="DPPrecentChange();">
+              Down Payment Percent:<input id="DPPcnt" type="text" onchange="DPAmntChange();">
           		State:<div id="stateSelect"></div>
           	</form>
           </div>
