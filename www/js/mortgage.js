@@ -43,6 +43,10 @@ function makeTable() {
   var interest = parseFloat(document.getElementById('interest').value) / 100;
   var downPayment = parseFloat(document.getElementById('DPAmnt').value);
   var lenght = parseInt(document.getElementById('length').value);
-
+  var remaining = principle - downPayment;
+  var mInterest = interest / 12;
+  var periods = length * 12;
+  var innerParenth =  Math.pow((1 + mInterest), periods);
+  var monthly = remaining * ((mInterest * innerParenth) / (innerParenth - 1));
   document.getElementById('table').innerHTML = table;
 }
